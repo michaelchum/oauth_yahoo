@@ -3,9 +3,9 @@ require 'globals.php';
 require 'oauth_helper.php';
 
 // Fill in the next 3 variables.
-$guid='X4323GFSERGF43454GSFGBCCB3';
-$access_token='A=KdfjadlskfjSDFGG.ertklsioerkjhSDFGkjlhasdfik345k34897SDFgklhe4kljhdSGKLjhsdfg.mcxkhdfSGKHsdfgkjeroI.REsdFGSFDg.sdfgiwresdfgsfhg.gh.tyu.ghfj.dfghfsdg.fgsdg.sdfgiretkjsfdgkjlhertiuysdfgkjhsdfgkljertkjhsdfguyert8743508972345lkjhsdfi8g89sdfg89sdfg908sdfg897sdfg8sdfg734jk25kljhwdkjlhsdfgkjlhsfdgkjlhsdfgjkhsdfgkjhsfdgiuywert87425ksdkjhlsdfgkjlhsdfgjklcxbm.cxvb.asfdkljadsflk.jasldkj3452387wert98sdfg8sdfg897sdfg890sdfgpoiret.lsdfgkljsdfgiwret_sfgkjhmnsdfgjkcvbmsdfglkjhewrtiusdfgjkhsdfgiuret87245lkjhdsfg.mnvbkisdfwertrwt.42534wertwgsdfg.cxvbsfdgsdfg.rwetwert.452435wertwretwer.wertwergtsdfgsdfg.sdfgsdfgrewtwret4252345wtdfgsdfg.sdfgsdfgsdfgewrtwert23452345wertwgsdfgfdrtyfhdgsdfgsdfgrewtwertsdfgdfgrt2rwersdfgdfgretrwefgrwtwertwertweryrwywertwertfsgfsdgsdferw3452twresdfgwretwert45wrtertrtg-';
-$access_token_secret='o2345w980945353478594867g3454l45lk324wrd';
+$guid='UOM4UNZYNI3E2QK6PCGXJWOKMY';
+$access_token='A=XTULSMrbiT47BY.oipJD04TrZFy.es8i3CyPcE5z7udjN5gCcAVmpbapbQfoqZh_3g.dmALgm.crVvZi.96NPKROcthNtbISPz6kRIqaLutzvl6qux3Yvn4O3TF0VqaTWcH3zHHB0DJwdTOSZXd3ngxFjWup18DdS7GMjOO4kNsAae8QGjuIPCMqCgns6Frn7nPE8qBUJRZ3nzpb3hwRA9KNKewSJ.C3tm81V9xAM9cvo3WI6C_D42b0LU0M66QhegbWrXb5yASsBOXWT3tnj5f8MHpDlSn0eaOIG4OuHBzifnRzj0sv1BoimjJWMdhAPE8.gY2qQufn1_9Nhpw8St7j9fcVGKjC2O7AyJme_psFQ1F8HQ5pnrwRazkqQSxPtIVDcNqYckBNEJ6E578qqmgmjZhoG0fonSMeekmzOMzbHtI0fW57Faa1Al5C6q5eRH7PBKY_DRqFm7U_yAS4DyK.KPtLmy5e3M.GiOz_kocuRh6K8S4nJelSZIIuLxmDLBteBhpFmddXHGVzmU2w4GpVhd5GSq4UsoYN6_dXsK4GAdC2jXJfeoGm1pFhw_Wm2K2sarnEtlDgEIWMVwE9gr5xVfOkIhG7A_noVjiJ1srPBnS5NWGXx79XUZsR5K.IOcA2M4femi29RZt59FnfSpJEQqRMX7.Mr1SIPnN1rfE94KOVSOSY7kYWg0NV2jYfCSNJLjmu7e1_Q0w3WbtoNa5iisL_78kSvaf1alL3i5.G._85W0dkqwrE9kkW0yZY4uq0jgx1ROy6sA927X_fjsdh4wYLZF3If0BzxuADzcgkoE0oM2q5VZp0vCQ-';
+$access_token_secret='edefc7236c654690a2c1482ca471be815096306f';
 
 // Call Contact API
 $retarr = postcontact(OAUTH_CONSUMER_KEY, OAUTH_CONSUMER_SECRET,
@@ -31,7 +31,7 @@ function postcontact($consumer_key, $consumer_secret, $guid, $access_token, $acc
   $response = array();
 
   $post_body='{"contact":{"fields":[{"type":"name","value":{"givenName":"John","middleName":"","familyName":"Doe","prefix":"","suffix":"","givenNameSound":"","familyNameSound":""}},{"type":"email","value":"johndoe@example.com"}]}}';
-  $url = 'http://social.yahooapis.com/v1/user/' . $guid . '/contacts';
+  $url = 'https://social.yahooapis.com/v1/user/' . $guid . '/contacts';
   $params['oauth_version'] = '1.0';
   $params['oauth_nonce'] = mt_rand();
   $params['oauth_timestamp'] = time();

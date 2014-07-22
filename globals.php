@@ -4,8 +4,8 @@
  */
 
 // Fill in the next two constants
-define('OAUTH_CONSUMER_KEY', 'rjfnfrioei49fekdi848w2ADRadfiAERSF234DDFAHGNF345dfasdffpoig34p5o6h7jCdTfSJzZWNyZXQmeE24ASe--');
-define('OAUTH_CONSUMER_SECRET', '4893028908asdf098092834242kljh54582049f6');
+define('OAUTH_CONSUMER_KEY', 'dj0yJmk9Vjc1YlFmQUdQTXBZJmQ9WVdrOVpGUXhUa3RWTldVbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1lOQ--');
+define('OAUTH_CONSUMER_SECRET', 'b9b26f9538d484f738aa2e95e408be1bde06f13a');
 
 $progname = $argv[0];
 $debug = 0; // Set to 1 for verbose debugging output

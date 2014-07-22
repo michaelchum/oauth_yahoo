@@ -3,9 +3,9 @@ require 'globals.php';
 require 'oauth_helper.php';
 
 // Fill in the next 3 variables.
-$request_token='w9giroe';
-$request_token_secret='z3a2abcd3ag1c543fg987d1c2222a333popa24ee';
-$oauth_verifier= 'lrifnc';
+$request_token='nxqua4k';
+$request_token_secret='f556a2479ac554a6639a551a1323193b55530e37';
+$oauth_verifier= 'xpeyxx';
 
 // Get the access token using HTTP GET and HMAC-SHA1 signature
 $retarr = get_access_token(OAUTH_CONSUMER_KEY, OAUTH_CONSUMER_SECRET,

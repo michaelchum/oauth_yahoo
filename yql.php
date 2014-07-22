@@ -3,9 +3,9 @@ require 'globals.php';
 require 'oauth_helper.php';
 
 // Fill in the next 3 variables.
-$querynum = 1;
-$access_token='A=KdfjadlskfjSDFGG.ertklsioerkjhSDFGkjlhasdfik345k34897SDFgklhe4kljhdSGKLjhsdfg.mcxkhdfSGKHsdfgkjeroI.REsdFGSFDg.sdfgiwresdfgsfhg.gh.tyu.ghfj.dfghfsdg.fgsdg.sdfgiretkjsfdgkjlhertiuysdfgkjhsdfgkljertkjhsdfguyert8743508972345lkjhsdfi8g89sdfg89sdfg908sdfg897sdfg8sdfg734jk25kljhwdkjlhsdfgkjlhsfdgkjlhsdfgjkhsdfgkjhsfdgiuywert87425ksdkjhlsdfgkjlhsdfgjklcxbm.cxvb.asfdkljadsflk.jasldkj3452387wert98sdfg8sdfg897sdfg890sdfgpoiret.lsdfgkljsdfgiwret_sfgkjhmnsdfgjkcvbmsdfglkjhewrtiusdfgjkhsdfgiuret87245lkjhdsfg.mnvbkisdfwertrwt.42534wertwgsdfg.cxvbsfdgsdfg.rwetwert.452435wertwretwer.wertwergtsdfgsdfg.sdfgsdfgrewtwret4252345wtdfgsdfg.sdfgsdfgsdfgewrtwert23452345wertwgsdfgfdrtyfhdgsdfgsdfgrewtwertsdfgdfgrt2rwersdfgdfgretrwefgrwtwertwertweryrwywertwertfsgfsdgsdferw3452twresdfgwretwert45wrtertrtg-';
-$access_token_secret='o2345w980945353478594867g3454l45lk324wrd';
+$querynum = 2;
+$access_token='A=mHTCzdrYvVl4x6SaVS8W2oJTF.YOwv.Ob6Zqi2wFUz3oljk1Pps3LClAqBNr0SC5vCCz.al7XSma3870cZJx27DtzPpa6z8kJfgrww.pPO8u4P28RzxVLoHY4NK16XFbIMEpnDPo9Sm5dA3AY0_S7gNswij4L50r78yImaQVDmSjav6xIiV51KMxEcCrv7YO40MSv7UDnKYLm67Oc9Dy8m.7pgLdW4JhPjomU28IsU7kPHhZ6dtPUj0I03yD2XHVl5XDpaXaA3cIXw1R0H4G.bNgfbA0m242i0QGUR5rzE8S4S2Qe9KpnMuBopCsFrWIem5bZl7fvJYGk_YmTk9gARoGOwNIDl_T_U.gL_eax3.TYChILMsvYwEx7wDCw3aIWoPyxv7FI407Ey84DsIbmWUazekBNkQ4S2oDqu64WxSdkhLFdST4krdT085g.g4wVUjE0KZoIwXVEbu3n4WcDc.qTY28ImupWa_c4MC6GUWFePbRsifBWbD6agE5BtQvTFLytFQPezGqFs8h6tFBAh6x1fV_gR.8Fdec.pHDxhNBo4F.WlKG6uk32Vq8KaGk9p8KypBaTmsjFymrwmmPsu43D6yOwlRwgrCnlc4IJ9Haj6FH_30zPUYZozQArUigvWWZbej2N5aJQBagAhgkU99kawRETjBMRJlJ0skn_NpiErGHp16GWB4lfDS_KnDD7jBjMX0C_Bzy9d5EA2YRucMV237yZ.7MnioeRFYsPGjXPQfDzvBwTHkNNN5NHlFpMz2EtWC0_OMY4OIAmPIldgrMf4_9tOAoG4yTOUPt7c4.80cJEU2SkPBJHnflz0_IXoAYlw--';
+$access_token_secret='69e7cce25555f9588ad89ffa9a3de3be201923cc';
 
 // Call YQL
 $retarr = call_yql(OAUTH_CONSUMER_KEY, OAUTH_CONSUMER_SECRET,
@@ -30,16 +30,16 @@ function call_yql($consumer_key, $consumer_secret, $querynum, $access_token, $ac
   $response = array();
 
   if ($querynum == 1) {
-    $url = 'http://query.yahooapis.com/v1/yql';
+    $url = 'https://query.yahooapis.com/v1/yql';
     // Show my profile
     $params['q'] = 'select * from social.profile where guid=me';
   } elseif ($querynum == 2) {
-    $url = 'http://query.yahooapis.com/v1/yql';
+    $url = 'https://query.yahooapis.com/v1/yql';
     // Find my friends
     $params['q'] = 'select * from social.connections where owner_guid=me';
   } else {
     // Since this information is public, use the non oauth endpoint 'public'
-    $url = 'http://query.yahooapis.com/v1/public/yql';
+    $url = 'https://query.yahooapis.com/v1/public/yql';
     // Find all sushi restaurants in SF order by number of ratings desc
     $params['q'] = 'select Title,Address,Rating from local.search where query="sushi" and location="san francisco, ca"|sort(field="Rating.TotalRatings",descending="true")';
   }
